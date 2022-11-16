@@ -1,0 +1,22 @@
+body {
+  background-color: blueviolet;
+  color: whitesmoke;
+  font-family: Poppins, sans-serif;
+}
+div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px;
+}
+textarea {
+  background-color: whitesmoke;
+  color: black;
+}
+input {
+  border: 1px solid white;
+  background-color: white;
+  color: blueviolet;
+}
