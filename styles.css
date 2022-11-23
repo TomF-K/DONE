@@ -1,22 +1,58 @@
-body {
-  background-color: blueviolet;
-  color: whitesmoke;
-  font-family: Poppins, sans-serif;
+:root {
+  --border-soft: 0.25rem;
+  --clr-bg: blueviolet;
+  --clr-primary: whitesmoke;
 }
-div {
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-primary);
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+}
+
+.hero h1 {
+  margin: 2rem 0 0 0;
+}
+.hero p {
+  margin: 0.5rem 0 0 0;
+}
+
+.flex-center {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 5px;
 }
-textarea {
-  background-color: whitesmoke;
-  color: black;
+
+.todo-form input {
+  border: none;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: var(--border-soft);
 }
-input {
-  border: 1px solid white;
-  background-color: white;
-  color: blueviolet;
+
+.todo h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  color: var(--clr-bg);
+  background-color: var(--clr-primary);
+  text-transform: uppercase;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--border-soft);
+  border: 2px solid var(--clr-bg);
+}
+
+.btn:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-primary);
 }
