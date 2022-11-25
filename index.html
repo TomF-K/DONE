@@ -4,30 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/To-do app/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>DONE.</title>
   </head>
   <body>
-    <div class="top-text">
+    <header class="hero flex-center">
       <h1>DONE.</h1>
-      <p>andy woz ere</p>
       <p>To-do, but better.</p>
-    </div>
-    <div class="task-input">
-      <label for="task-input">
-        What needs to get DONE?</label></div>
-        <div class="add-task">
-        <textarea
-          id="task-input"
-          name="task-input"
-          rows="1"
-          cols="30"
-          placeholder="Sell the cat..."
-        ></textarea>
-        </div>
-        <div id="add-button"><input type="submit" name="add-button" value="Add Task" /></div>
-        
-      </label>
-    </div>
+    </header>
+    <main>
+      <article class="flex-center todo">
+        <h2>What needs to get DONE?</h2>
+        <form class="todo-form" action="/api" method="POST">
+          <label for="task-input">New task:</label>
+          <div class="">
+            <input
+              id="task-input"
+              name="task-input"
+              type="text"
+              placeholder="Sell the cat..."
+            />
+            <button type="submit" class="btn" name="add-button">Add</button>
+          </div>
+        </form>
+      </article>
+    </main>
   </body>
 </html>
