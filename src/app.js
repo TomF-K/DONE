@@ -1,12 +1,14 @@
 import express from 'express';
 import path from 'path';
 import getDirname from './utils/getDirname.js';
+import apiRouter from './routes/api.js';
 
 const app = express();
 const PORT = 3000;
 const __dirname = getDirname(import.meta.url);
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {
   res.status(200);
