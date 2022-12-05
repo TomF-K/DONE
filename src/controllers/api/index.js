@@ -4,6 +4,4 @@ import getTodo from './getTodo.js';
 import listTodos from './listTodos.js';
 import updateTodo from './updateTodo.js';
 
-export {
-  createTodo, deleteTodo, getTodo, listTodos, updateTodo,
-};
+export { createTodo, deleteTodo, getTodo, listTodos, updateTodo };

@@ -3,7 +3,8 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb-base'],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  plugins: ['prettier'],
   overrides: [
     {
       files: ['**test.js'],
@@ -17,8 +18,11 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'import/extensions': 0,
-    'no-underscore-dangle': 0,
-    'no-console': 0,
+    'import/extensions': 'off',
+    'no-underscore-dangle': 'off',
+    'no-console': 'off',
+    'prettier/prettier': 'error',
+    'arrow-body-style': 'off',
+    'prefer-arrow-callback': 'off',
   },
 };
