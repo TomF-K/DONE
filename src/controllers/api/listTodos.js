@@ -1,5 +1,3 @@
-const listTodos = (req, res) => {
-  return res.send('listTodo');
-};
+const listTodos = (req, res) => res.send('listTodo');
 
 export default listTodos;

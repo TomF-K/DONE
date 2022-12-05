@@ -1,5 +1,3 @@
-const deleteTodo = (req, res) => {
-  return res.send('deleteTodo');
-};
+const deleteTodo = (req, res) => res.send('deleteTodo');
 
 export default deleteTodo;

@@ -1,5 +1,5 @@
 const getTodo = (req, res) => {
-  return res.send('getTodo');
+  res.send('getTodo');
 };
 
 export default getTodo;
