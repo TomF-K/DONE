@@ -1,0 +1,27 @@
+{
+  "name": "done.",
+  "version": "0.0.0",
+  "description": "A damn fancy TODO",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomF-K/DONE.git"
+  },
+  "author": "Tom Kenrick, Andy Little",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomF-K/DONE/issues"
+  },
+  "homepage": "https://github.com/TomF-K/DONE#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
