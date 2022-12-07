@@ -1,7 +1,12 @@
+import * as dotenv from 'dotenv';
 import express from 'express';
 import path from 'path';
 import getDirname from './utils/getDirname.js';
 import apiRouter from './routes/api.js';
+import { connectDb } from './db/mongoClient.js';
+
+dotenv.config();
+await connectDb();
 
 const app = express();
 const PORT = 3000;
