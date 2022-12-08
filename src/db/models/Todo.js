@@ -18,6 +18,7 @@ const todoModel = new mongoose.Schema({
     enum: ['IDLE', 'PENDING', 'COMPLETE'],
     default: 'IDLE',
   },
+  userId: { type: String, required: true },
 });
 
 export default mongoose.model('todos', todoModel);
