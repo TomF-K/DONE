@@ -4,6 +4,7 @@ import path from 'path';
 import getDirname from './utils/getDirname.js';
 import apiRouter from './routes/api.js';
 import { connectDb } from './db/mongoClient.js';
+import auth from './middleware/auth.js';
 
 dotenv.config();
 await connectDb();
@@ -12,7 +13,7 @@ const app = express();
 const PORT = 3000;
 const __dirname = getDirname(import.meta.url);
 
-app.use([express.static(path.join(__dirname, 'public')), express.json()]);
+app.use([express.static(path.join(__dirname, 'public')), express.json(), auth]);
 app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {
