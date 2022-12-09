@@ -20,7 +20,6 @@ module.exports = {
   rules: {
     'import/extensions': 'off',
     'no-underscore-dangle': 'off',
-    'no-console': 'off',
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
