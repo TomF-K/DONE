@@ -14,7 +14,7 @@ export const errorHandler = (fn) => {
     try {
       return await fn(req, res, next);
     } catch (error) {
-      return next(error);
+      throw new Error(error);
     }
   };
 };

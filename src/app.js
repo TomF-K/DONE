@@ -1,8 +1,10 @@
 import * as dotenv from 'dotenv';
 import express from 'express';
+import 'express-async-errors';
 import path from 'path';
 import getDirname from './utils/getDirname.js';
 import apiRouter from './routes/api.js';
+import userRouter from './routes/user.js';
 import { connectDb } from './db/mongoClient.js';
 import auth from './middleware/auth.js';
 import ErrorMiddleware from './middleware/error.js';
@@ -20,6 +22,7 @@ app.use([
   auth,
   ErrorMiddleware,
 ]);
+app.use('/user', userRouter);
 app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {

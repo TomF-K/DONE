@@ -8,6 +8,7 @@ mongoose.set('strictQuery', false);
 const connectDb = async () => {
   try {
     await mongoose.connect(uri);
+    // eslint-disable-next-line no-console
     console.log('conntected to db');
     return mongoose;
   } catch (error) {

@@ -7,7 +7,7 @@ module.exports = {
   plugins: ['prettier'],
   overrides: [
     {
-      files: ['**test.js'],
+      files: ['**test.cjs'],
       plugins: ['jest'],
       extends: ['plugin:jest/recommended'],
       rules: {},
