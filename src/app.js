@@ -16,12 +16,7 @@ const app = express();
 const PORT = 3000;
 const __dirname = getDirname(import.meta.url);
 
-app.use([
-  express.static(path.join(__dirname, 'public')),
-  express.json(),
-  auth,
-  ErrorMiddleware,
-]);
+app.use([express.static(path.join(__dirname, 'public')), express.json(), auth]);
 app.use('/user', userRouter);
 app.use('/api', apiRouter);
 
@@ -34,6 +29,8 @@ app.get('/new', (req, res) => {
   res.status(200);
   res.sendFile(path.resolve(__dirname, './templates/new.html'));
 });
+
+app.use(ErrorMiddleware);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console

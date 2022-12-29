@@ -26,7 +26,7 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'email is a required field'],
     maxLength: [50, 'email field should have a max 35 characters'],
     trim: true,
-    unique: true,
+    unique: [true, 'email address already registered'],
   },
 });
 
