@@ -16,7 +16,10 @@ const app = express();
 const PORT = 3000;
 const __dirname = getDirname(import.meta.url);
 
-app.use([express.static(path.join(__dirname, 'public')), express.json(), auth]);
+/* Protected Routes */
+app.use('/api', auth);
+
+app.use([express.static(path.join(__dirname, 'public')), express.json()]);
 app.use('/user', userRouter);
 app.use('/api', apiRouter);
 

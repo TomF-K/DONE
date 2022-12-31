@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 
+/* TODO 
+name should be unique to user but not across entire database
+*/
+
 const todoModel = new mongoose.Schema({
   name: {
     type: String,

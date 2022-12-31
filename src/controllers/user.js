@@ -17,6 +17,10 @@ export const login = errorHandler(async (req, res) => {
     .send({ userName: user.email, token: user.createJWT() });
 });
 
+export const logout = errorHandler(async (req, res) => {
+  res.send('TODO logout');
+});
+
 export const signup = errorHandler(async (req, res) => {
   const { fName, lName, email, password } = req.body;
   const user = await User.create({ fName, lName, email, password });
@@ -26,9 +30,8 @@ export const signup = errorHandler(async (req, res) => {
 });
 
 export const editUser = (req, res) => {
-  res.send('edit user');
+  res.send('TODO edit user');
 };
-
-/* TODO, 
-del user
-*/
+export const deleteUser = errorHandler(async (req, res) => {
+  res.send('TODO delete user');
+});

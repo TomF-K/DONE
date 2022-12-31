@@ -44,7 +44,12 @@ UserSchema.pre('save', async function hashPassword() {
 
 UserSchema.methods.createJWT = function createJWT() {
   return jwt.sign(
-    { userId: this._id, userName: this.email },
+    {
+      userId: this._id,
+      userName: this.email,
+      fName: this.fName,
+      lName: this.lName,
+    },
     process.env.JWT_SECRET,
     {
       expiresIn: process.env.JWT_EXPIRY,
