@@ -1,9 +1,11 @@
 import Todo from '../../db/models/Todo.js';
 import { errorHandler } from '../../utils/HTTPError.js';
 
+/* TODO create index for users */
+
 const listTodos = errorHandler(async (req, res) => {
-  /* create index for users */
-  const todos = await Todo.find({ userId: req.userId });
+  const { userId } = req.userContext;
+  const todos = await Todo.find({ userId });
   return res.status(200).json({ todos });
 });
 

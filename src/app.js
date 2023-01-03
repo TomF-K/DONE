@@ -1,8 +1,10 @@
 import * as dotenv from 'dotenv';
 import express from 'express';
+import 'express-async-errors';
 import path from 'path';
 import getDirname from './utils/getDirname.js';
 import apiRouter from './routes/api.js';
+import userRouter from './routes/user.js';
 import { connectDb } from './db/mongoClient.js';
 import auth from './middleware/auth.js';
 import ErrorMiddleware from './middleware/error.js';
@@ -14,12 +16,11 @@ const app = express();
 const PORT = 3000;
 const __dirname = getDirname(import.meta.url);
 
-app.use([
-  express.static(path.join(__dirname, 'public')),
-  express.json(),
-  auth,
-  ErrorMiddleware,
-]);
+/* Protected Routes */
+app.use('/api', auth);
+
+app.use([express.static(path.join(__dirname, 'public')), express.json()]);
+app.use('/user', userRouter);
 app.use('/api', apiRouter);
 
 app.get('/', (req, res) => {
@@ -31,6 +32,8 @@ app.get('/new', (req, res) => {
   res.status(200);
   res.sendFile(path.resolve(__dirname, './templates/new.html'));
 });
+
+app.use(ErrorMiddleware);
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
