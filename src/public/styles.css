@@ -62,3 +62,21 @@ body {
 input:checked + label {
   color: black;
 }
+
+.sign-up {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.sign-up:hover {
+  color: var(--clr-primary);
+  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-primary);
+  text-decoration: none;
+}
+
+input > text {
+  display: block;
+}
