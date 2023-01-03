@@ -58,3 +58,7 @@ body {
   background-color: var(--clr-bg);
   border: 2px solid var(--clr-primary);
 }
+
+input:checked + label {
+  color: black;
+}
