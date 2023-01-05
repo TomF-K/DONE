@@ -77,6 +77,6 @@ input:checked + label {
   text-decoration: none;
 }
 
-input > text {
+input {
   display: block;
 }

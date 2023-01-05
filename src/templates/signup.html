@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Signup Form</title>
+  </head>
+  <body>
+    <form class="flex-center signup-form">
+      <label for="user-first-name">First Name</label>
+      <input id="user-first-name" type="text" placeholder="First Name" />
+      <label for="user-last-name">Last Name</label>
+      <input id="user-last-name" type="text" placeholder="Last Name" />
+      <label for="user-password">Password</label>
+      <input
+        id="user-password"
+        type="password"
+        placeholder="Password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$"
+        required
+      />
+      <label for="user-confirm-password">Confirm Password</label>
+      <input
+        id="user-confirm-password"
+        type="password"
+        placeholder="Confirm Password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$"
+        required
+        
+      />
+      <p>
+        Passwords must be at least 8 characters in length and include: 
+        <ul>
+          <li>at least one lowercase letter</li>
+          <li>at least one uppercase letter</li>
+          <li>at least one number</li>
+        </ul>
+      </p>
+    </form>
+  </body>
+</html>
