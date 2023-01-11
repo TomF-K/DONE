@@ -2,7 +2,7 @@ import Todo from '../../db/models/Todo.js';
 import { errorHandler } from '../../utils/HTTPError.js';
 
 /* TODO create index for users */
-
+/* Shouldn't return userIds */
 const listTodos = errorHandler(async (req, res) => {
   const { userId } = req.userContext;
   const todos = await Todo.find({ userId });
