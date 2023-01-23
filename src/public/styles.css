@@ -68,6 +68,7 @@ input:checked + label {
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  color: var(--clr-primary);
 }
 
 .sign-up:hover {
@@ -79,4 +80,26 @@ input:checked + label {
 
 input {
   display: block;
+}
+
+.flex-center-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+ul {
+  margin-top: 0px;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.left-link {
+  margin-left: 30px;
 }
