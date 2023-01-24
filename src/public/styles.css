@@ -1,3 +1,5 @@
+/* general styling */
+
 :root {
   --border-soft: 0.25rem;
   --clr-bg: blueviolet;
@@ -11,19 +13,33 @@ body {
   font-size: 1rem;
 }
 
+/* todo.html styling */
+
 .hero h1 {
   margin: 2rem 0 0 0;
 }
 
 .hero p {
   margin: 0.5rem 0 0 0;
+  font-weight: lighter;
 }
 
 .flex-center {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ;
+  padding: 1rem;
+}
+
+.todo h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+span {
+  font-weight: 500;
 }
 
 .todo-form input {
@@ -35,14 +51,15 @@ body {
   border-radius: var(--border-soft);
 }
 
-.todo h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 2px;
+.todo-item {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
 }
 
 .btn {
   padding: 0.5rem 2rem;
+  margin: 10px 10px 20px 0px;
   font-size: 1rem;
   color: var(--clr-bg);
   background-color: var(--clr-primary);
@@ -57,6 +74,10 @@ body {
   color: var(--clr-primary);
   background-color: var(--clr-bg);
   border: 2px solid var(--clr-primary);
+}
+
+.task-input {
+  padding: 20px;
 }
 
 input:checked + label {
@@ -81,6 +102,8 @@ input:checked + label {
 input {
   display: block;
 }
+
+/* signup.html */
 
 .flex-center-signup-form {
   display: flex;

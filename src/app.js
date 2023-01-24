@@ -38,6 +38,11 @@ app.get('/signup', (req, res) => {
   res.sendFile(path.resolve(__dirname, './templates/signup.html'));
 });
 
+app.get('/todo', (req, res) => {
+  res.status(200);
+  res.sendFile(path.resolve(__dirname, './templates/signup.html'));
+});
+
 app.use(ErrorMiddleware);
 
 app.listen(PORT, () => {
