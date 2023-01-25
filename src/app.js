@@ -40,7 +40,7 @@ app.get('/signup', (req, res) => {
 
 app.get('/todo', (req, res) => {
   res.status(200);
-  res.sendFile(path.resolve(__dirname, './templates/signup.html'));
+  res.sendFile(path.resolve(__dirname, './templates/todo.html'));
 });
 
 app.use(ErrorMiddleware);

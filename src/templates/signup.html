@@ -10,17 +10,25 @@
   <body>
     <header class="signup-header">
       <nav class="left-link"><h1><a href="./todo">DONE.</a></h1></nav>
+      <nav class="right-links">
+        <ul>
+          <li><a href="">Login</a></li>
+          <li><a href="./signup">Sign Up</a></li>
+        </ul>
+      </nav>
     </header>
     <form class="flex-center-signup-form">
       <label for="user-first-name">First Name</label>
       <input id="user-first-name" type="text" placeholder="First Name" />
       <label for="user-last-name">Last Name</label>
       <input id="user-last-name" type="text" placeholder="Last Name" />
+      <label for="email">Email</label>
+      <input id="email" type="text" placeholder="Email Address" />
       <label for="user-password">Password</label>
       <input
         id="user-password"
         type="password"
-        placeholder="Password"
+        placeholder="Create Password"
         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$"
         required
       />
@@ -33,6 +41,8 @@
         required
         
       />
+      </form>
+      <div class="password-requirements">
       <p>
         Passwords must be at least 8 characters in length and include: 
         <ul>
@@ -41,6 +51,7 @@
           <li>at least one number</li>
         </ul>
       </p>
-    </form>
+      </div>
+    
   </body>
 </html>

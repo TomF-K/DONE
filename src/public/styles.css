@@ -11,6 +11,12 @@ body {
   color: var(--clr-primary);
   font-family: Poppins, sans-serif;
   font-size: 1rem;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
 }
 
 /* todo.html styling */
@@ -105,6 +111,29 @@ input {
 
 /* signup.html */
 
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.left-link {
+  margin-left: 30px;
+}
+
+.right-links {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 40px;
+}
+
 .flex-center-signup-form {
   display: flex;
   flex-direction: column;
@@ -113,16 +142,10 @@ input {
   margin-top: 100px;
 }
 
-ul {
-  margin-top: 0px;
+.password-requirements {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
   font-weight: lighter;
-}
-
-a {
-  text-decoration: none;
-  color: var(--clr-primary);
-}
-
-.left-link {
-  margin-left: 30px;
+  margin-top: 30px;
 }
