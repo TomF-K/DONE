@@ -33,6 +33,21 @@ app.get('/new', (req, res) => {
   res.sendFile(path.resolve(__dirname, './templates/new.html'));
 });
 
+app.get('/signup', (req, res) => {
+  res.status(200);
+  res.sendFile(path.resolve(__dirname, './templates/signup.html'));
+});
+
+app.get('/todo', (req, res) => {
+  res.status(200);
+  res.sendFile(path.resolve(__dirname, './templates/todo.html'));
+});
+
+app.get('/login', (req, res) => {
+  res.status(200);
+  res.sendFile(path.resolve(__dirname, './templates/login.html'));
+});
+
 app.use(ErrorMiddleware);
 
 app.listen(PORT, () => {

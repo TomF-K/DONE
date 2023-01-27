@@ -14,10 +14,10 @@
     </header>
     <main>
       <article class="flex-center todo">
-        <h2>What needs to get DONE?</h2>
+        <h2>What needs to get <span>DONE?</span></h2>
         <form class="todo-form" action="/api/todo" method="POST">
           <label for="task-input">New task:</label>
-          <div class="">
+          <div class="task-input">
             <input
               id="task-input"
               name="task-input"
@@ -25,11 +25,11 @@
               placeholder="Sell the cat..."
             />
             <button type="submit" class="btn" name="add-button">Add</button>
-            <div>
+            <div class="todo-item">
               <input id="checkbox" type="checkbox" />
               <label for="checkbox">Learn Javascript</label>
               </div>
-              <div>
+              <div class="todo-item">
               <input id="checkbox" type="checkbox" />
               <label for="checkbox">Get Job</label>
               </div>
@@ -43,6 +43,6 @@
         </form>
       </article>
     </main>
-    <h2 class="sign-up"><a href="./signup.html">Sign Up Here</a></h2>
+    <h2 class="sign-up"><a href="./signup">Sign Up Here</a></h2>
   </body>
 </html>

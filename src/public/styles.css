@@ -1,3 +1,5 @@
+/* general styling */
+
 :root {
   --border-soft: 0.25rem;
   --clr-bg: blueviolet;
@@ -9,7 +11,15 @@ body {
   color: var(--clr-primary);
   font-family: Poppins, sans-serif;
   font-size: 1rem;
+  box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+/* todo.html styling */
 
 .hero h1 {
   margin: 2rem 0 0 0;
@@ -17,13 +27,24 @@ body {
 
 .hero p {
   margin: 0.5rem 0 0 0;
+  font-weight: lighter;
 }
 
 .flex-center {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-between;
+  padding: 1rem;
+}
+
+.todo h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+span {
+  font-weight: 500;
 }
 
 .todo-form input {
@@ -35,14 +56,15 @@ body {
   border-radius: var(--border-soft);
 }
 
-.todo h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 2px;
+.todo-item {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.5rem;
 }
 
 .btn {
   padding: 0.5rem 2rem;
+  margin: 10px 10px 20px 0px;
   font-size: 1rem;
   color: var(--clr-bg);
   background-color: var(--clr-primary);
@@ -59,6 +81,10 @@ body {
   border: 2px solid var(--clr-primary);
 }
 
+.task-input {
+  padding: 20px;
+}
+
 input:checked + label {
   color: black;
 }
@@ -68,6 +94,7 @@ input:checked + label {
   align-items: center;
   text-decoration: none;
   justify-content: center;
+  color: var(--clr-primary);
 }
 
 .sign-up:hover {
@@ -79,4 +106,51 @@ input:checked + label {
 
 input {
   display: block;
+}
+
+/* signup.html */
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px 80px 60px;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+
+.homepage-link {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.right-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flex-center-signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.password-requirements {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-weight: lighter;
+  margin-top: 30px;
 }
