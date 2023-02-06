@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <header class="login-header">
+      <nav>
+            <p class="homepage-link"><a href="./todo">DONE.</a></p>
+          <ul class="right-links">
+          <li>
+            <a href="./login">Log In</a>
+          </li>
+            <a href="./signup">Sign Up</a>
+          </li>
+          </ul>
+      </nav>
+    </header>
+    <form class="flex-center-login-form">
+      <h2>Log in to your account</h2>
+      <container>
+        <div class="text-label">
+      <label for="email">Email</label>
+      </div>
+      <input id="email" type="text" placeholder="Email Address" />
+      <label for="user-password">Password</label>
+      <input
+        id="user-password"
+        type="password"
+        placeholder="Password"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,24}$"
+        required
+      />
+      </container>
+      <button type="submit" class="btn" name="login-button">Log In</button>
+    </form>
+  </body>
+</html>
