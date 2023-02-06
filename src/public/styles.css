@@ -169,6 +169,14 @@ nav ul {
   margin-top: 30px;
 }
 
+ul li {
+  list-style-type: none;
+}
+
+i {
+  margin: 0.5rem;
+}
+
 .submit-btn {
   align-self: center;
 }
