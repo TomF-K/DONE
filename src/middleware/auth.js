@@ -22,6 +22,7 @@ export default errorHandler((req, res, next) => {
       fName,
       lName,
     };
+    console.log(req.userContext);
   }
   next();
 });
